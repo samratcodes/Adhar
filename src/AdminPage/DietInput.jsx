@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
-const DietInput = () => {
+const FoodForm = () => {
   const [formData, setFormData] = useState({
     Image: '',
     name: '',
     Description: '',
-    Cost: ''
+    Cost: '',
+    Quantity: '',
+    Category: ''
   });
 
   const handleChange = (e) => {
@@ -21,57 +23,98 @@ const DietInput = () => {
       Image: '',
       name: '',
       Description: '',
-      Cost: ''
+      Cost: '',
+      Quantity: '',
+      Category: ''
     });
   };
 
   return (
-    <div>
-      <h2>Add New Food</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="Image">Image URL:</label>
-          <input
-            type="text"
-            id="Image"
-            name="Image"
-            value={formData.Image}
-            onChange={handleChange}
-          />
+    <div className="max-w-xl mx-auto bg-white p-6 mt-7 rounded-lg shadow-md">
+      <h2 className="text-2xl font-semibold mb-4">Post diet</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="Image" className="block text-sm font-medium text-gray-700">Image URL:</label>
+            <input
+              type="text"
+              id="Image"
+              name="Image"
+              value={formData.Image}
+              onChange={handleChange}
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              placeholder="Enter image URL"
+            />
+          </div>
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              placeholder="Enter food name"
+            />
+          </div>
         </div>
         <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="Description">Description:</label>
+          <label htmlFor="Description" className="block text-sm font-medium text-gray-700">Description:</label>
           <textarea
             id="Description"
             name="Description"
             value={formData.Description}
             onChange={handleChange}
+            rows="3"
+            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+            placeholder="Enter description"
           ></textarea>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="Cost" className="block text-sm font-medium text-gray-700">Cost (Rs.):</label>
+            <input
+              type="number"
+              id="Cost"
+              name="Cost"
+              value={formData.Cost}
+              onChange={handleChange}
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              placeholder="Enter cost"
+            />
+          </div>
+          <div>
+            <label htmlFor="Quantity" className="block text-sm font-medium text-gray-700">Quantity:</label>
+            <input
+              type="number"
+              id="Quantity"
+              name="Quantity"
+              value={formData.Quantity}
+              onChange={handleChange}
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              placeholder="Enter quantity"
+            />
+          </div>
+        </div>
         <div>
-          <label htmlFor="Cost">Cost (Rs.):</label>
+          <label htmlFor="Category" className="block text-sm font-medium text-gray-700">Category:</label>
           <input
-            type="number"
-            id="Cost"
-            name="Cost"
-            value={formData.Cost}
+            type="text"
+            id="Category"
+            name="Category"
+            value={formData.Category}
             onChange={handleChange}
+            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+            placeholder="Enter category"
           />
         </div>
-        <button type="submit">Add Food</button>
+        <button type="submit" className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white py-2 rounded hover:from-green-500 hover:to-green-700 transition ease-in-out">
+          Add Food
+        </button>
       </form>
     </div>
   );
 };
 
-export default DietInput;
+export default FoodForm;

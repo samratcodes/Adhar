@@ -86,11 +86,11 @@ const PaymentVerification = () => {
           <h2 className="text-4xl font-semibold mb-8">Transaction Request</h2>
           {selectedUser ? (
             <div>
-              <div className="bg-white shadow rounded-lg p-6">
-                <ul className="space-y-4 grid grid-cols-2  items-center pl-4">
-                  <div className="flex flex-col gap-6">
+              <div className="bg-white shadow rounded-lg p-6 ">
+                <ul className="space-y-4 grid grid-cols-2 pb-2  justify-between items-center pl-4 border-gray-200 border-b-2">
+                  <div className="flex flex-col gap-6 ">
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Name
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -98,7 +98,7 @@ const PaymentVerification = () => {
                       </p>
                     </li>
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Email Address
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -106,7 +106,7 @@ const PaymentVerification = () => {
                       </p>
                     </li>
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Card Number
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -116,7 +116,7 @@ const PaymentVerification = () => {
                   </div>
                   <div className="flex flex-col gap-6">
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Transaction Number
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -124,7 +124,7 @@ const PaymentVerification = () => {
                       </p>
                     </li>
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Date
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -132,7 +132,7 @@ const PaymentVerification = () => {
                       </p>
                     </li>
                     <li>
-                      <p className="font-semibold text-gray-700 text-2xl">
+                      <p className="font-semibold text-gray-700 text-xl">
                         Amount
                       </p>
                       <p className="text-gray-900 text-lg">
@@ -142,14 +142,22 @@ const PaymentVerification = () => {
                   </div>
                 </ul>
                 <div className="flex gap-6 items-center">
-                  <div className="flex justify-start mt-6 gap-4">
-                    {/* Approve Button */}
-                    <div className="text-center">
+                  <div className="w-full flex justify-between mt-10 gap-4">
+                  <div className="flex justify-start mb-12 gap-6 ">
+
+<button className="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-700 text-xl flex items-center">
+  <FaUser className="mr-2 text-base" />
+  View Profile
+</button>
+</div>
+                <div className="flex">
+                      {/* Approve Button */}
+                      <div className="text-center">
                       <button
-                        className=" bg-[#009C65] text-white px-4 py-2 rounded mr-2 hover:bg-green-700 text-2xl flex items-center"
+                        className=" bg-[#009C65] text-white px-6 py-2 rounded mr-2 hover:bg-green-700 text-base flex items-center"
                         title="Approve"
                       >
-                        <FaCheck className="mr-2" />
+                        <FaCheck className="mr-2 text-base" />
                         Approve
                       </button>
                       <p className="ml-2 mt-2 text-[10px] text-gray-400">
@@ -159,28 +167,20 @@ const PaymentVerification = () => {
                     {/* Decline Button */}
                     <div className="text-center">
                       <button
-                        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 text-2xl flex items-center"
+                        className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 text- flex items-center"
                         title="Decline"
                       >
-                        <ImCross className="mr-2" />
+                        <ImCross className="mr-2 text-base" />
                         Decline
                       </button>
                       <p className="ml-2 mt-2 text-[10px] text-gray-400">
                         Decline the transaction
                       </p>
                     </div>
+                </div>
                   </div>
                   {/* Additional User Actions */}
-                  <div className="flex justify-start mt-[50px] mb-12 gap-6 ">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 text-2xl flex items-center">
-                      <FaEnvelope className="mr-2 text-lg" />
-                      Send Email
-                    </button>
-                    <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 text-2xl flex items-center">
-                      <FaUser className="mr-2 text-lg" />
-                      View Profile
-                    </button>
-                  </div>
+
                 </div>
                 {/* Transaction History */}
                 <div className="mt-6">
