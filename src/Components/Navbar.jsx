@@ -4,6 +4,7 @@ import { FaPeopleLine } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaBus } from "react-icons/fa";
+import { GiFruitBowl } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import Image from '../Assets/Logonot.png'
@@ -31,7 +32,7 @@ const Navbar = () => {
     },{
       name: "Niutrition",
       link:'/Niutrition',
-      icon: <div>o</div>
+      icon: <GiFruitBowl/>
     }
   ];
 

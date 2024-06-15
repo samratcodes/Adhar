@@ -44,7 +44,7 @@ icon: <MdDashboard />
 
 <div>
 {DashboardData.map((nav, index) => (
-  <Link key={index} to={nav.link} className='flex items-center text-xl h-2/3  font-bold  hover:text-green-200 '>
+  <Link key={index} to={nav.link} className='flex items-center text-lg h-2/3  font-bold  hover:text-green-200 '>
               <div className='text-4xl'>{nav.icon}</div>
               <span className=' pl-3 '>{nav.name}</span>
             </Link>
