@@ -51,13 +51,15 @@ const Navbar = () => {
           ))
         }
       </div>
-      <div className='flex justify-between w-20'>
+      <div className='flex justify-between w-32'>
 
-      
-       <IoIosNotifications className=' text-3xl '/> 
-       <Link to='/' className='text-2xl'>
-       <FaUser className=' text-2xl '/>
+      <Link to='/dashboard' className='bg-green-500 mr-4 text-white rounded-3xl font-bold p-2 text-sm '>
+      Dashboard
       </Link>
+      <Link to='/admin/profileadmin' className='bg-green-500 text-white rounded-3xl font-bold p-2 text-sm '>
+      Admin
+      </Link>
+
       </div>
     </div>
   );

@@ -1,39 +1,43 @@
 import React from 'react'
+import { MdDashboard } from "react-icons/md";
 import { Outlet } from 'react-router-dom'
-import Image from '../src/Assets/Logonot.png'
+import Image from '../src/Assets/LogoWhitetext.png'
+import { MdWork } from "react-icons/md";
+import { MdPayments } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { FaWpforms } from "react-icons/fa6";
 const Dashbioard = () => {
 
 
   const DashboardData =[{
 name :'Dashboard',
 link: '/dashboard',
-icon: '0'
+icon: <MdDashboard />
   },
   {
     name :'DataSubmit',
     link: '/dashboard/datasubmit',
-    icon: '0'
+    icon: <FaWpforms />
       },
       {
         name :'Jobs',
         link: '/dashboard/jobs',
-        icon: '0'
+        icon: <MdWork />
           },
           {
             name :'Payment',
             link: '/dashboard/payment',
-            icon: '0'
+            icon: <MdPayments />
               }
 
 
 ]
   return (
     <div className='flex w-full'>
-      <div className='w-1/5 bg-green-100 flex h-screen justify-center  text-white' id='Button'>
+      <div className='w-[250px] flex-shrink-0 bg-green-100 flex h-screen justify-center  text-white' id='Button'>
 <div className='w-full  flex flex-col items-center'>
-<div className='w-full mt-4 flex justify-center  border-white border-b-2'>
-       <div className='w-36 '>
+<div className='w-full  flex justify-center  border-white border-b-2'>
+       <div className='w-28 m-6'>
        <img src={Image} alt="" />
        </div>
        </div>
