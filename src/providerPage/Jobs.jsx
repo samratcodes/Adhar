@@ -40,16 +40,16 @@ export default function Jobs() {
   const [bookings, setBookings] = useState(dummyData);
 
   const handleAccept = (id) => {
-    alert('Booked');
+    alert("Booked");
   };
 
   const handleReject = (id) => {
-    alert('Reject');
+    alert("Reject");
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center text-blue-700">
+    <div className="container mx-auto px-4 py-8 ">
+      <h1 className="text-3xl font-bold mb-8 text-center text-black-700">
         Nurse Bookings
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
