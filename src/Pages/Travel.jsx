@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { FaTaxi } from "react-icons/fa6";
-
+import { FaHandHoldingMedical } from "react-icons/fa";
 const Travel = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [clickedLocation, setClickedLocation] = useState(null);
@@ -73,81 +73,15 @@ const Travel = () => {
     return (
         <div className='w-full  flex flex-col  items-center justify-center'>
             <div className='w-4/5 font-semibold text-4xl' id='textColor'>
-                <div className='flex my-4'>
-                    <FaTaxi /> &nbsp; &nbsp;
-                     <h1 className='text-4xl font-medium'>Transportation</h1>
-                </div>
+            <div className='flex w-full items-center ' id='LogoPage'>
+          <FaHandHoldingMedical className='text-4xl mr-2 my-4 ' />
+          <h1 className='text-2xl font-bold'>Medical</h1>
+        </div>
             </div>
             <div className='w-4/5 text-4xl'>
-            {book?       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="vehicle">
-            Select a vehicle:
-          </label>
-          <div>
-            <input
-              className="mr-2 leading-tight"
-              type="radio"
-              id="car"
-              name="vehicle"
-              value="car"
-              checked={vehicle === 'car'}
-              onChange={handleVehicleChange}
-            />
-            <label className="inline-block text-sm text-gray-700" htmlFor="car">
-              Car
-            </label>
-          </div>
-          <div>
-            <input
-              className="mr-2 leading-tight"
-              type="radio"
-              id="bike"
-              name="vehicle"
-              value="bike"
-              checked={vehicle === 'bike'}
-              onChange={handleVehicleChange}
-            />
-            <label className="inline-block text-sm text-gray-700" htmlFor="bike">
-              Bike
-            </label>
-          </div>
-        </div>
-        <div className="mb-4">
-          <input
-            type="checkbox"
-            id="volunteer"
-            name="volunteer"
-            checked={volunteerNeeded}
-            onChange={handleVolunteerChange}
-          />
-          <label className="inline-block text-sm text-gray-700 ml-2" htmlFor="volunteer">
-            Volunteer needed
-          </label>
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="location">
-            Location:
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-2/5 font-normal text-xl text-gray-700  focus:outline-none focus:shadow-outline"
-            id="location"
-            type="text"
-            placeholder="Location"
-            value={location}
-            onChange={handleLocationChange}
-          />
-        </div>
-        <div className="flex items-center justify-center">
-          <button
-            className="bg-green-500 hover:bg-green-600 text-xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
- : <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            {book?      
+            ""
+ : <form onSubmit={handleSubmit} className="  bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
  <div className="mb-4">
    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="vehicle">
      Select a vehicle:
@@ -245,7 +179,7 @@ const Travel = () => {
                                 </Marker>
                             )}
 
-                            {/* Click handler */}
+                           
                             <ClickHandler />
                         </MapContainer>
                     </div>
