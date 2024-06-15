@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { FaEnvelope, FaUser } from "react-icons/fa";
+import SecondaryHeader from "../Components/SecondaryHeader";
 
 const PaymentVerification = () => {
   const users = [
@@ -83,7 +84,8 @@ const PaymentVerification = () => {
     <div className=" px-16 pb-16">
       <div className="flex">
         <div className="w-full mt-12 pl-6 pr-32">
-          <h2 className="text-4xl font-semibold mb-8">Transaction Request</h2>
+          <SecondaryHeader header={" Transaction Request"} className={"mb-8"} />
+
           {selectedUser ? (
             <div>
               <div className="bg-white shadow rounded-lg p-6 ">
