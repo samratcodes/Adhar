@@ -73,7 +73,7 @@ const RecreationalAdmin = () => {
   return (
     <div className="">
       <h4 className="font-bold text-3xl text-center mb-4">
-        Add a Recration Activities
+        Add a Recreation Activities
       </h4>
 
       <form

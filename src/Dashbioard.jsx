@@ -52,7 +52,9 @@ icon: <MdDashboard />
 </div>
 </div>
       </div>
-      <Outlet/>
+      <div className="flex  w-full justify-center h-screen overflow-scroll">
+        <Outlet />
+      </div>
     </div>
   )
 }
