@@ -18,6 +18,8 @@ import ProfileAdmin from "./AdminPage/ProfileAdmin.jsx";
 import RecreationalAdmin from "./AdminPage/RecreationalAdmin.jsx";
 import Admin from "./Admin.jsx";
 import DoctorPage from "./Pages/DoctorPage.jsx";
+import DietInput from "./AdminPage/DietInput.jsx";
+import Landing from "./Pages/Landing.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +48,9 @@ const router = createBrowserRouter([
       {
         path:"doctor",
         element:<DoctorPage/>
+      },{
+        path:'landing',
+        element:<Landing/>
       }
     ],
   },
@@ -86,13 +91,14 @@ const router = createBrowserRouter([
       },
       {
         path: "NutritionAdmin",
-        element: <Workout />,
+        element: <DietInput />,
       },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    
     <RouterProvider router={router} />
   </React.StrictMode>
 );
