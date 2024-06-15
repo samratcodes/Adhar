@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from "react";
+import { CiGlobe } from "react-icons/ci";
 import backgroundImage from "../Assets/careTakerNepali.jpg";
 import aboutImg from "../Assets/landingpagejpt.jpg";
 
@@ -69,8 +71,65 @@ const Landing = () => {
           </div>
         </div>
       </div>
+      <div className="py-28 px-12 flex flex-gap justify-center items-center gap-x-4 gap-y-16 flex-wrap bg-white">
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />{" "}
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />{" "}
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />{" "}
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />{" "}
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />
+        <MyComponent
+          title="Block A / CriticalNursing 24/7 care"
+          description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
+          readMoreLink="/read-more"
+          icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
+        />
+      </div>
     </>
   );
 };
+
+function MyComponent({ title, description, readMoreLink, icon }) {
+  return (
+    <div className="flex flex-col items-center justify-center gap-4 bg-slate-50 px-4 py-10 w-96 relative">
+      <div className="p-4 bg-green-500 -top-10 absolute">{icon}</div>
+      <h1 className="text-black font-bold text-2xl">{title}</h1>
+      <p className="text-gray-500 line-clamp-5">{description}</p>
+      <a href={readMoreLink} className="text-orange-600">
+        Read More &#8594;
+      </a>
+    </div>
+  );
+}
 
 export default Landing;
