@@ -57,8 +57,7 @@ const Dashbioard = () => {
         </div>
       </div>
       <div className="flex  w-full justify-center h-screen overflow-scroll">
-
-      <Outlet />
+        <Outlet />
       </div>
     </div>
   );
