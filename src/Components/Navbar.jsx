@@ -52,7 +52,8 @@ const Navbar = () => {
         }
       </div>
       <div className='flex justify-between w-20'>
-        
+
+      
        <IoIosNotifications className=' text-3xl '/> 
        <Link to='/' className='text-2xl'>
        <FaUser className=' text-2xl '/>
