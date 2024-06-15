@@ -30,9 +30,9 @@ const Navbar = () => {
       link: "/Recrartion",
       icon: <FaPeopleLine className='text-2xl' />
     },{
-      name: "Niutrition",
+      name: "Diet Plan",
       link:'/Niutrition',
-      icon: <GiFruitBowl/>
+      icon: <GiFruitBowl className='text-2xl'/>
     }
   ];
 

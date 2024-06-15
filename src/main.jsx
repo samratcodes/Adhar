@@ -85,7 +85,7 @@ const router = createBrowserRouter([
         element: <RecreationalAdmin />,
       },
       {
-        path: "Workoutadmin",
+        path: "NutritionAdmin",
         element: <Workout />,
       },
     ],
