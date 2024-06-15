@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Recreational />,
       },
       {
-        path: "Workout",
+        path: "Niutrition",
         element: <Workout />,
       },
       {

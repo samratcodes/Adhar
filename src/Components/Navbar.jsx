@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaPeopleLine } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaBus } from "react-icons/fa";
@@ -9,10 +10,6 @@ import Image from '../Assets/Logonot.png'
 const Navbar = () => {
   const navdata = [
     {
-      name: "Home",
-      link: "/",
-      icon: <FaHome className='text-2xl' />
-    },{
       name: "Home",
       link: "/",
       icon: <FaHome className='text-2xl' />
@@ -30,7 +27,11 @@ const Navbar = () => {
     {
       name: "Recreational",
       link: "/Recrartion",
-      icon: <FaHome className='text-2xl' />
+      icon: <FaPeopleLine className='text-2xl' />
+    },{
+      name: "Niutrition",
+      link:'/Niutrition',
+      icon: <div>o</div>
     }
   ];
 
