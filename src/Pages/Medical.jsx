@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaHandHoldingMedical } from "react-icons/fa";
 import DoctorCard from '../Components/DoctorCard';
-
+import Doc1 from '../Assets/doc1.jpg';
+import Doc2 from '../Assets/doc2.jpg';
+import Doc3 from '../Assets/doc3.jpg';
+import Nurse1 from '../Assets/nurse1.jpg';
+import Nurse2 from '../Assets/nurse2.jpg';
+import Nurse3 from '../Assets/nurse3.jpg';
 const Medical = () => {
   const [selectedCategory, setSelectedCategory] = useState(0); // Default to the first category
   const [selectedOption, setSelectedOption] = useState('Doctor'); // Default to 'doctor'

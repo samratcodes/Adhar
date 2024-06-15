@@ -122,7 +122,7 @@ const DoctorPage = () => {
                 name="bookingName"
                 value={bookingName}
                 onChange={handleBookingNameChange}
-                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                className="shadow-sm focus:ring-indigo-500 pl-4 p-1 border-2 border-gray-400 focus:border-indigo-500 mt-1 block w-full sm:text-sm  rounded-md"
                 placeholder="Enter your name"
                 required
               />
@@ -135,7 +135,7 @@ const DoctorPage = () => {
                 name="bookingDate"
                 value={bookingDate}
                 onChange={handleBookingDateChange}
-                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                className="shadow-sm focus:ring-indigo-500 pl-4 p-1 border border-gray-400 focus:border-indigo-500 mt-1 block w-full sm:text-sm  rounded-md"
                 required
               />
             </div>
@@ -147,7 +147,7 @@ const DoctorPage = () => {
                 name="bookingTime"
                 value={bookingTime}
                 onChange={handleBookingTimeChange}
-                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                className="shadow-sm focus:ring-indigo-500 pl-4 p-1 border border-gray-400 focus:border-indigo-500 mt-1 block w-full sm:text-sm  rounded-md"
                 required
               />
             </div>

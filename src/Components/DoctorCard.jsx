@@ -1,39 +1,82 @@
 import React from 'react';
 import { FaArrowRight, FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import Doc1 from '../Assets/doc1.jpg';
+import Doc2 from '../Assets/doc2.jpg';
+import Doc3 from '../Assets/doc3.jpg';
+import Nurse1 from '../Assets/nurse1.jpg';
+import Nurse2 from '../Assets/nurse2.jpg';
+import Nurse3 from '../Assets/nurse3.jpg';
 const DoctorCard = ({ selectedCategory, selectedOption }) => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'  // Optional: adds smooth scrolling behavior
+    });
+  };
+  
   const doctorInfo = [{
-    image: 'https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Doc1,
     rating: 4.5,
-    name: 'Dr. John Doe',
+    name: 'Dr. Ram Bahadur',
     category: 'Cardiologist',
     averageSalary: '5,000',
     visitLink: '/doctor'
   },{
-    image: 'https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Doc2,
     rating: 4.5,
     name: 'Dr. Jane Doe',
+    category: 'Cardiologist',
+    averageSalary: '5,000',
+    visitLink: '/doctor'
+  },{
+    image: Doc3,
+    rating: 4,
+    name: 'Dr. Jane Doe',
+    category: 'Cardiologist',
+    averageSalary: '5,000',
+    visitLink: '/doctor'
+  },{
+    image: Doc1,
+    rating: 4.5,
+    name: 'Dr. Ram Bahadur',
     category: 'Cardiologist',
     averageSalary: '5,000',
     visitLink: '/doctor'
   }];
 
   const nurseInfo = [{
-    image: 'https://images.pexels.com/photos/612937/pexels-photo-612937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Nurse1,
     rating: 4.7,
     name: 'Nurse Mary Johnson',
     category: 'ICU Nurse',
     averageSalary: '3,000',
     visitLink: '/doctor'
   },{
-    image: 'https://images.pexels.com/photos/612937/pexels-photo-612937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Nurse2,
     rating: 4.6,
     name: 'Nurse Sarah Smith',
     category: 'Pediatric Nurse',
     averageSalary: '3,200',
     visitLink: '/doctor'
-  }];
+  },
+  {
+    image: Nurse3,
+    rating: 4.6,
+    name: 'Nurse Sarah Smith',
+    category: 'Pediatric Nurse',
+    averageSalary: '3,200',
+    visitLink: '/doctor'
+  },{
+    image: Nurse1,
+    rating: 4.7,
+    name: 'Nurse Mary Johnson',
+    category: 'ICU Nurse',
+    averageSalary: '3,000',
+    visitLink: '/doctor'
+  }
+];
 
   const renderStars = (rating) => {
     const stars = [];
@@ -61,7 +104,8 @@ const DoctorCard = ({ selectedCategory, selectedOption }) => {
         </div>
         <p className="text-gray-700 mt-2">Average Cost: Rs. {person.averageSalary}</p>
         <Link to={person.visitLink}
-          className="mt-4 text-white py-2 px-4 rounded flex items-center justify-center bg-blue-500 hover:bg-blue-700"
+          className="mt-4 text-white py-2 px-4 rounded flex items-center justify-center bg-green-500 hover:bg-green-700"
+          onClick={scrollToTop}
         >
           Visit Now
           <FaArrowRight className="ml-2" />
