@@ -263,7 +263,7 @@ const Medical = () => {
           >
             <option value="Doctor">Doctor</option>
             <option value="Nurse">Nurse</option>
-            <option value="CareTaker">Caretaker</option>
+            <option value="Caretaker">Caretaker</option>
           </select>
         </div>
         <div className="flex flex-row w-full bg-white">
