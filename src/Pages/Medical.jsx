@@ -12,71 +12,173 @@ const Medical = () => {
       name: 'General Checkup',
       subcategories: [
         { 
-          title: 'Temperature', 
-          description: 'Measurement of body temperature.', 
-          cost: 200 
+          "title": "Temperature", 
+          "description": "Measurement of body temperature.", 
+          "cost": 200 
         },
         { 
-          title: 'Blood Pressure', 
-          description: 'Measurement of blood pressure.', 
-          cost: 350 
+          "title": "Blood Pressure", 
+          "description": "Measurement of blood pressure.", 
+          "cost": 350 
         },
         { 
-          title: 'Cholesterol Levels', 
-          description: 'Evaluates different types of cholesterol in the blood.', 
-          cost: 250 
+          "title": "Cholesterol Levels", 
+          "description": "Evaluates different types of cholesterol in the blood.", 
+          "cost": 250 
         },
+        { 
+          "title": "SpO2", 
+          "description": "Measurement of blood oxygen saturation levels.", 
+          "cost": 150 
+        },
+        { 
+          "title": "Respiration per Minute", 
+          "description": "Measurement of the number of breaths per minute.", 
+          "cost": 180 
+        },
+        { 
+          "title": "Pulse", 
+          "description": "Measurement of heart rate.", 
+          "cost": 220 
+        }
       ]
+      
     },
     {
-      name: 'Heart Health',
-      subcategories: [
+      "name": "Eye Checkup",
+      "subcategories": [
         { 
-          title: 'Cardiac Checkup', 
-          description: 'Assessment of overall heart health.', 
-          cost: 300 
+          "title": "Visual Acuity Test", 
+          "description": "Measurement of how well you can see at various distances.", 
+          "cost": 100 
         },
         { 
-          title: 'Heart Rate', 
-          description: 'Number of heartbeats per minute.', 
-          cost: 150 
+          "title": "Refractor Assessment", 
+          "description": "Evaluation of the need for corrective lenses.", 
+          "cost": 120 
         },
+        { 
+          "title": "Color Vision Test", 
+          "description": "Assessment of your ability to distinguish between different colors.", 
+          "cost": 90 
+        },
+        { 
+          "title": "Eye Muscle Function Test", 
+          "description": "Examination of the muscles that control eye movement.", 
+          "cost": 110 
+        }
       ]
-    },
+    },{
+      "name": "Kidney Function Checkup",
+      "subcategories": [
+        { 
+          "title": "Serum Creatinine Test", 
+          "description": "Measurement of creatinine levels in the blood to assess kidney function.", 
+          "cost": 130 
+        },
+        { 
+          "title": "BUN Test", 
+          "description": "Blood urea nitrogen test to evaluate kidney health.", 
+          "cost": 140 
+        },
+        { 
+          "title": "Urine Creatinine Test", 
+          "description": "Measurement of creatinine levels in urine to assess kidney function.", 
+          "cost": 120 
+        },
+        { 
+          "title": "Kidney Imaging", 
+          "description": "Imaging tests like ultrasound or CT scan to visualize the kidneys.", 
+          "cost": 250 
+        }
+      ]
+    },{
+      "name": "Lung Function Test",
+      "subcategories": [
+        { 
+          "title": "Pulmonary Function Tests", 
+          "description": "A series of tests to measure how well your lungs work.", 
+          "cost": 300 
+        },
+        { 
+          "title": "Arterial Blood Gas Test", 
+          "description": "Measurement of oxygen and carbon dioxide levels in the blood.", 
+          "cost": 200 
+        },
+        { 
+          "title": "Bronchoscopy", 
+          "description": "A procedure to look inside the lungs' airways using a bronchoscope.", 
+          "cost": 400 
+        },
+        { 
+          "title": "Ventilation-Perfusion Scan", 
+          "description": "A scan to examine airflow (ventilation) and blood flow (perfusion) in the lungs.", 
+          "cost": 350 
+        }
+      ]
+    }
+    
+    
+    
   ];
 
   const categoriesNurse = [
-    {
-      name: 'Blood Checkup',
-      subcategories: [
-        { 
-          title: 'Sugar', 
-          description: 'Measures blood glucose levels for diabetes assessment.', 
-          cost: 250 
+     { 
+          "name": "Wound Dressing", 
+          "description": "Professional care and management of wounds to promote healing.", 
+          "cost": 100,
+          "subcategories": [
+            {
+              "title": "Basic Wound Dressing",
+              "description": "Simple dressing for minor wounds.",
+              "cost": 50
+            },
+            {
+              "title": "Advanced Wound Dressing",
+              "description": "Complex dressing for severe or chronic wounds.",
+              "cost": 150
+            }
+          ]
         },
         { 
-          title: 'Cholesterol', 
-          description: 'Assesses levels of cholesterol in the blood.', 
-          cost: 350 
+          "name": "Psychological Support", 
+          "description": "Emotional and mental health support provided by a nurse.", 
+          "cost": 200,
+          "subcategories": [
+            {
+              "title": "Counseling Session",
+              "description": "One-on-one counseling session for mental health support.",
+              "cost": 100
+            },
+            {
+              "title": "Support Group Session",
+              "description": "Group session to share experiences and receive support.",
+              "cost": 80
+            }
+          ]
         },
+        { 
+          "name": "Normal Check-up", 
+          "description": "Routine health check-up by a nurse.", 
+          "cost": 150,
+          "subcategories": [
+            {
+              "title": "Vital Signs Monitoring",
+              "description": "Measurement of blood pressure, temperature, heart rate, and respiratory rate.",
+              "cost": 60
+            },
+            {
+              "title": "Health Assessment",
+              "description": "Comprehensive assessment of overall health status.",
+              "cost": 100
+            }
+          ]
+        }
       ]
-    },
-    {
-      name: 'Skin Care',
-      subcategories: [
-        { 
-          title: 'Acne', 
-          description: 'Common skin condition with pimples and inflammation.', 
-          cost: 300 
-        },
-        { 
-          title: 'Eczema', 
-          description: 'Inflammatory skin condition causing itching and redness.', 
-          cost: 250 
-        },
-      ]
-    },
-  ];
+    
+    
+    
+  
 
   const categoriesCaretaker = [
     {
