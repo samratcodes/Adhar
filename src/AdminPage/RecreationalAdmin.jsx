@@ -1,6 +1,7 @@
 import { useState } from "react";
 import dbService from "../services/databases";
 import FormInput from "../Components/FormInput";
+import SecondaryHeader from "../Components/SecondaryHeader";
 
 const RecreationalAdmin = () => {
   const [formData, setFormData] = useState({
@@ -71,14 +72,16 @@ const RecreationalAdmin = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <div className="container mx-auto py-9 px-4">
       <form
         onSubmit={handleSubmit}
-        className="max-w-4xl mx-auto p-6 border rounded-lg shadow-md bg-white"
+        className="max-w-4xl mx-auto px-6 py-1 border rounded-lg shadow-md bg-white"
       >
-        <h4 className="font-bold text-3xl mb-8 text-left">
-          Add a Recreation Activity
-        </h4>
+        <SecondaryHeader
+          header={" Add a Recreation Activity"}
+          className={"mb-8"}
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormInput
             type="text"
