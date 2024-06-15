@@ -20,6 +20,7 @@ import Admin from "./Admin.jsx";
 import DoctorPage from "./Pages/DoctorPage.jsx";
 import DietInput from "./AdminPage/DietInput.jsx";
 import Landing from "./Pages/Landing.jsx";
+import Premium from "./Pages/Premium.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +52,9 @@ const router = createBrowserRouter([
       },{
         path:'landing',
         element:<Landing/>
+      },{
+        path:'premium',
+        element:<Premium/>
       }
     ],
   },

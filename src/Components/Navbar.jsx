@@ -42,7 +42,7 @@ const Navbar = () => {
       <Link to='/' className='text-2xl'><img className=' w-16' src={Image} alt="" />
       </Link>
       </div>
-      <div className='w-3/6 flex justify-between font-semibold text-gray-700'>
+      <div className='w-5/12 flex justify-between font-semibold text-gray-700'>
         {
           navdata.map((nav, index) => (
             <Link key={index} to={nav.link} className='flex items-center '>
@@ -52,12 +52,17 @@ const Navbar = () => {
           ))
         }
       </div>
-      <div className='flex justify-between w-32'>
-
-      <Link to='/dashboard' className='bg-green-500 mr-4 text-white rounded-3xl font-bold p-2 text-sm '>
+      <div className='flex justify-between items-center '>
+      <Link
+      to="/premium"
+      className="subscription-link"
+    >
+      Subscription
+    </Link>
+      <Link to='/dashboard' className='bg-green-500 mr-4 h-max text-white rounded-3xl font-bold px-4 py-2 text-sm '>
       Dashboard
       </Link>
-      <Link to='/admin/profileadmin' className='bg-green-500 text-white rounded-3xl font-bold p-2 text-sm '>
+      <Link to='/admin/profileadmin' className='bg-green-500 h-max text-white rounded-3xl font-bold px-4 py-2 text-sm '>
       Admin
       </Link>
 

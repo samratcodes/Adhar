@@ -7,3 +7,32 @@
 #Button{
     background-color: #009C65;
 }
+.subscription-link {
+    background-color: #22C55E; /* Tailwind's green-500 */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem; /* Tailwind's text-base */
+    border-radius: 1.5rem; /* Tailwind's rounded-3xl */
+    padding: 0.75rem 1.5rem; /* Increased padding for a more prominent button */
+    margin-right: 1rem; /* Tailwind's mr-4 */
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    animation: pulse 1s infinite;
+  }
+  
+  .subscription-link:hover {
+    background-color: #2f855a; /* Tailwind's green-600 */
+    transform: translateY(-0.25rem);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
