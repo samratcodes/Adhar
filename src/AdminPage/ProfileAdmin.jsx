@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import dbService from "../services/databases";
 import Loader from "../Components/Loader";
+import SecondaryHeader from "../Components/SecondaryHeader";
 
 export default function ProfileAdmin() {
   const [documents, setDocuments] = useState([]);
@@ -39,9 +40,8 @@ export default function ProfileAdmin() {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold text-left my-6 text-blue-800">
-        Verification
-      </h2>
+      <h2 className="text-2xl font-bold text-left my-2 text-blue-800"></h2>
+      <SecondaryHeader header={"Verification"} className={"mb-8"} />
 
       {loading ? (
         <Loader />
