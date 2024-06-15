@@ -313,8 +313,7 @@ const Medical = () => {
        
       <div className="w-full shadow-lg rounded-lg p-8 ">
         <h1 className="text-2xl font-bold mb-4">{selectedOption} Profiles</h1>
-        {/* <div className="text-lg mb-4">{selectedCategory}</div> */}
-        <DoctorCard />
+        <DoctorCard selectedOption={selectedOption} selectedCategory={selectedCategory} />
       </div>
     </div>
 
