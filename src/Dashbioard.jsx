@@ -37,7 +37,7 @@ icon: <MdDashboard />
       <div className='w-[250px] flex-shrink-0 bg-green-100 flex h-screen justify-center  text-white' id='Button'>
 <div className='w-full  flex flex-col items-center'>
 <div className='w-full  flex justify-center  border-white border-b-2'>
-       <div className='w-28 m-6'>
+       <div className='w-24 m-6'>
        <img src={Image} alt="" />
        </div>
        </div>

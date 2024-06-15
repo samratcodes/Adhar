@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import dbService from "../services/databases";
+import Loader from "../Components/Loader";
+import { FaPeopleLine } from "react-icons/fa6";
 
 export default function Recreational() {
   const [activities, setActivities] = useState([]);
@@ -24,7 +26,15 @@ export default function Recreational() {
   }, []); // Empty dependency array ensures it runs only once on mount
 
   if (loading) {
-    return <div className="text-center mt-4">Loading...</div>;
+    return (
+      <div className="bg-gray-100 flex flex-col items-center min-h-screen">
+        <div className="flex w-4/5 items-center" id="LogoPage">
+          <FaPeopleLine className="text-4xl mr-2 my-4" />
+          <h1 className="text-2xl font-bold">Recreational</h1>
+        </div>
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
@@ -32,10 +42,11 @@ export default function Recreational() {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">
-        Recreational Activities
-      </h1>
+    <div className="bg-gray-100 flex flex-col items-center min-h-screen">
+      <div className="flex w-4/5 items-center" id="LogoPage">
+        <FaPeopleLine className="text-4xl mr-2 my-4" />
+        <h1 className="text-2xl font-bold">Recreational</h1>
+      </div>
       <div className="flex justify-center items-center gap-5 ">
         {activities.length === 0 ? (
           <div className="text-center">No activities found.</div>
@@ -98,4 +109,5 @@ function ActivityCard({ activity }) {
       </div>
     </div>
   );
+
 }
