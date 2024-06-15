@@ -71,95 +71,84 @@ const RecreationalAdmin = () => {
   };
 
   return (
-    <div className="">
-      <h4 className="font-bold text-3xl text-center mb-4">
-        Add a Recreation Activities
-      </h4>
-
+    <div className="container mx-auto py-8 px-4">
       <form
         onSubmit={handleSubmit}
-        className="max-w-lg mx-auto p-4 border rounded shadow-md"
+        className="max-w-4xl mx-auto p-6 border rounded-lg shadow-md bg-white"
       >
-        <FormInput
-          type="text"
-          name="title"
-          value={formData.title}
-          handleChange={handleChange}
-          placeholder="Title"
-          required
-        />
-        <FormInput
-          type="text"
-          name="location"
-          value={formData.location}
-          handleChange={handleChange}
-          placeholder="Location"
-          required
-        />
-        <FormInput
-          type="text"
-          name="maxCapacity"
-          value={formData.maxCapacity}
-          handleChange={handleChange}
-          placeholder="Max Capacity"
-          required
-        />
-        <FormInput
-          type="text"
-          name="date_time"
-          value={formData.date_time}
-          handleChange={handleChange}
-          placeholder="Date and Time"
-          required
-        />
-        <FormInput
-          type="text"
-          name="price"
-          value={formData.price}
-          handleChange={handleChange}
-          placeholder="Price"
-          required
-        />
-        <FormInput
-          type="text"
-          name="description"
-          value={formData.description}
-          handleChange={handleChange}
-          placeholder="Description"
-          required
-        />
-        <FormInput
-          type="file"
-          name="ActivityImage"
-          handleChange={handleChange}
-          placeholder="Activity Image"
-          required
-        />
+        <h4 className="font-bold text-3xl mb-8 text-left">
+          Add a Recreation Activity
+        </h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <FormInput
+            type="text"
+            name="title"
+            value={formData.title}
+            handleChange={handleChange}
+            placeholder="Title"
+            required
+          />
+          <FormInput
+            type="text"
+            name="location"
+            value={formData.location}
+            handleChange={handleChange}
+            placeholder="Location"
+            required
+          />
+          <FormInput
+            type="text"
+            name="maxCapacity"
+            value={formData.maxCapacity}
+            handleChange={handleChange}
+            placeholder="Max Capacity"
+            required
+          />
+          <FormInput
+            type="text"
+            name="date_time"
+            value={formData.date_time}
+            handleChange={handleChange}
+            placeholder="Date and Time"
+            required
+          />
+          <FormInput
+            type="text"
+            name="price"
+            value={formData.price}
+            handleChange={handleChange}
+            placeholder="Price"
+            required
+          />
+          <FormInput
+            type="text"
+            name="description"
+            value={formData.description}
+            handleChange={handleChange}
+            placeholder="Description"
+            required
+          />
+          <FormInput
+            type="file"
+            name="ActivityImage"
+            handleChange={handleChange}
+            placeholder="Activity Image"
+            required
+          />
+        </div>
 
-        <button
-          type="submit"
-          className="w-fit bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-          disabled={loading}
-        >
-          {loading ? "Submitting..." : "Submit"}
-        </button>
+        <div className="mt-6 flex justify-end">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+            disabled={loading}
+          >
+            {loading ? "Submitting..." : "Submit"}
+          </button>
+        </div>
       </form>
     </div>
   );
 };
 
 export default RecreationalAdmin;
-
-{
-  /* <div
-  className="p-2 bg-black w-fit text-white"
-    onClick={async () => {
-      const data = await dbService.getActivity("666b1d7b001098e5fdf1");
-      console.log(data);
-      const updateData = await dbService.updateActivity(data.$id, "samir2");
-      console.log(updateData);
-    }}
-  >
-    click me
-  </div> */
-}
