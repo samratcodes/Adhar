@@ -72,7 +72,7 @@ const Home = () => {
 <div className='flex flex-col items-center justify-center'>
 <div className='w-10/12 '>
 
-<div className=" px-4 bg-gray-100 min-h-screen">
+<div className=" px-4 min-h-screen">
 <div className='flex w-full items-center  ' id='LogoPage'>
           <FaHome className='text-4xl mr-2 my-4 ' />
           <h1 className='text-2xl font-bold'>Home</h1>

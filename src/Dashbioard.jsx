@@ -30,6 +30,7 @@ const Dashbioard = () => {
     },
   ];
   return (
+
     <div className="flex w-full">
       <div
         className="w-[250px] flex-shrink-0 bg-green-100 flex h-screen justify-center  text-white"
@@ -41,6 +42,7 @@ const Dashbioard = () => {
               <img src={Image} alt="" />
             </div>
           </div>
+
 
           <div>
             {DashboardData.map((nav, index) => (
