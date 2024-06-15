@@ -33,23 +33,23 @@ const Dashbioard = () => {
 
     <div className="flex w-full">
       <div
-        className="w-[250px] flex-shrink-0 bg-green-100 flex h-screen justify-center  text-white"
+        className="w-[220px] flex-shrink-0 bg-green-100 flex h-screen justify-center  text-white"
         id="Button"
       >
         <div className="w-full  flex flex-col items-center">
           <div className="w-full  flex justify-center  border-white border-b-2">
-            <div className="w-28 m-6">
+            <div className="w-24 m-6">
               <img src={Image} alt="" />
             </div>
           </div>
 
 
-          <div>
+          <div className="flex flex-col h-1/3">
             {DashboardData.map((nav, index) => (
               <Link
                 key={index}
                 to={nav.link}
-                className="flex items-center text-lg h-2/3  font-bold  hover:text-green-200 "
+                className="flex items-center text-base h-2/3  font-bold  hover:text-green-200 "
               >
                 <div className="text-4xl">{nav.icon}</div>
                 <span className=" pl-3 ">{nav.name}</span>
