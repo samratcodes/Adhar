@@ -1,6 +1,6 @@
 const Payment = () => {
   return (
-    <div className=" max-w-[1800px]">
+    <div className=" w-[1600px] ">
       {/* current balance section */}
       <div className="inline-block my-12 ml-16 ">
         <div className="flex items-center justify-center gap-44 rounded-lg shadow-md hover:shadow-lg py-8 px-12 bg-white">
