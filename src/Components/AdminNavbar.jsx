@@ -16,7 +16,9 @@ const adminNavItems =[
     <div className='w-full p-2  flex justify-center' id='Button'>
 <div className='w-11/12 flex justify-between'>
 <div className="logo w-20">
-        <img src={Image} alt="" />
+       <Link to="/">
+       <img src={Image} alt="" />
+       </Link>
       </div>
 <div className='flex justify-center items-center '>
 {adminNavItems.map((item, index) => (

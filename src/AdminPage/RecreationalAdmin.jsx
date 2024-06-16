@@ -72,15 +72,17 @@ const RecreationalAdmin = () => {
   };
 
   return (
-    <div className="container mx-auto py-9 px-4">
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-4xl mx-auto px-6 py-1 border rounded-lg shadow-md bg-white"
-      >
-        <SecondaryHeader
+   <div className="w-full flex justify-center">
+     <div className="container w-4/5  mx-auto  ">
+       <SecondaryHeader
           header={" Add a Recreation Activity"}
           className={"mb-8"}
         />
+      <form
+        onSubmit={handleSubmit}
+        className="w-full mx-auto px-6 py-1 pt-5 border rounded-lg shadow-md bg-white"
+      >
+       
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormInput
@@ -151,6 +153,7 @@ const RecreationalAdmin = () => {
         </div>
       </form>
     </div>
+   </div>
   );
 };
 

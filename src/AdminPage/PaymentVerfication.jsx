@@ -81,9 +81,9 @@ const PaymentVerification = () => {
   const [selectedUser, setSelectedUser] = useState(users[0]);
 
   return (
-    <div className=" px-16 pb-16">
-      <div className="flex">
-        <div className="w-full mt-12 pl-6 pr-32">
+    <div className="flex w-full justify-center  ">
+      <div className="flex w-4/5 justify-center">
+        <div className="w-4/5   ">
           <SecondaryHeader header={" Transaction Request"} className={"mb-8"} />
 
           {selectedUser ? (

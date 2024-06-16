@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa";
-
+import Doc1 from '../Assets/doc1.jpg';
 const DoctorPage = () => {
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([
@@ -23,13 +23,13 @@ const DoctorPage = () => {
   const [bookingTime, setBookingTime] = useState('');
 
   const doctorDetails = {
-    "name": "Dr. Emily Carter, MD",
+    "name": "Dr. Ram Bahadur, MD",
     "specialization": "Doctor of Medicine (MD)",
     "hospital": "City Hospital, 123 Main Street, Anytown, USA",
     "experience": "15 years",
     "email": "emily.carter@example.com",
     "contact": "+1 (555) 123-4567",
-    "profileImage": "https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "profileImage": Doc1,
     "rating": "5.0",
     "numReviews": 102,
     "expertise": [

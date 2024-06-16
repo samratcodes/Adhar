@@ -39,7 +39,9 @@ const Dashbioard = () => {
         <div className="w-full  flex flex-col items-center">
           <div className="w-full  flex justify-center  border-white border-b-2">
             <div className="w-24 m-6">
+              <Link to="/">
               <img src={Image} alt="" />
+              </Link>
             </div>
           </div>
 

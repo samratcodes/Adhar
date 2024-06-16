@@ -39,8 +39,7 @@ export default function ProfileAdmin() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold text-left my-2 text-blue-800"></h2>
+    <div className="container mx-auto w-4/5 ">
       <SecondaryHeader header={"Verification"} className={"mb-8"} />
 
       {loading ? (

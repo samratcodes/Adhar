@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import SecondaryHeader from "../Components/SecondaryHeader";
 const FoodForm = () => {
   const [formData, setFormData] = useState({
     Image: '',
@@ -30,9 +30,12 @@ const FoodForm = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto bg-white p-6 mt-7 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Post diet</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="w-4/5 mx-auto pt-2 mt-1  rounded-lg ">
+     <SecondaryHeader
+          header={" Post diet"}
+          className={"mb-5"}
+        />
+      <form onSubmit={handleSubmit} className="space-y-4 p-4  bg-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="Image" className="block text-sm font-medium text-gray-700">Image URL:</label>
