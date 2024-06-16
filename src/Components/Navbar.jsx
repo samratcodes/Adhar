@@ -69,10 +69,10 @@ const Navbar = () => {
         <Link to="/premium" className="subscription-link mr-4">
           Subscription
         </Link>
-        <Link to="/dashboard" className="bg-green-500 mr-4 text-white rounded-3xl font-bold px-4 py-2 text-sm">
+        <Link to="/dashboard" className="bg-green-50 mr-4 text-green-500 shadow-md rounded-3xl font-bold px-4 py-2 text-sm">
           Dashboard
         </Link>
-        <Link to="/admin/profileadmin" className="bg-green-500 text-white rounded-3xl font-bold px-4 py-2 text-sm">
+        <Link to="/admin/profileadmin" className="bg-green-50 mr-4 text-green-500 shadow-md rounded-3xl font-bold px-4 py-2 text-sm">
           Admin
         </Link>
       </div>

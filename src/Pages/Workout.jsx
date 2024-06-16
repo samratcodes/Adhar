@@ -7,19 +7,19 @@ const Workout = () => {
   const [foodsData, setFoodsData] = useState([
     {
       Image: "https://images.pexels.com/photos/61127/pexels-photo-61127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      name: "Apple",
+      name: "Banana",
       Description: "A sweet, edible fruit produced by an apple tree.",
       Cost: 50
     },
     {
       Image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      name: "Banana",
+      name: "Proper diet",
       Description: "An elongated, edible fruit produced by several kinds of large herbaceous flowering plants.",
       Cost: 20
     },
     {
       Image: "https://images.pexels.com/photos/434295/pexels-photo-434295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      name: "Orange",
+      name: "Balance diet",
       Description: "A type of citrus fruit that is known for being high in vitamin C.",
       Cost: 30
     },
