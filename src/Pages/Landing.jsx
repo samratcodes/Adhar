@@ -3,6 +3,8 @@ import React from "react";
 import { CiGlobe } from "react-icons/ci";
 import backgroundImage from "../Assets/careTakerNepali.jpg";
 import aboutImg from "../Assets/landingpagejpt.jpg";
+import { Link } from "react-router-dom";
+import Logo from "../Assets/LogoWhitetext.png";
 
 const Landing = () => {
   return (
@@ -11,16 +13,16 @@ const Landing = () => {
         className="relative w-full h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 flex items-center justify-start pl-16 pb-28">
+        <div className="absolute inset-0 flex items-center justify-start p-8 sm:pl-16 sm:pb-28">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
-              <div className="bg-[#009C65] w-2 h-24"></div>
-              <div className="text-white text-4xl font-bold">
+              <div className="bg-[#009C65] w-2 h-12 sm:h-24"></div>
+              <div className="text-white text-2xl sm:text-4xl font-bold">
                 <p>A place where</p>
                 <p>&quot;AGEING IS A BLESSING&quot;</p>
               </div>
             </div>
-            <p className="w-96 text-md text-white">
+            <p className="w-full sm:w-96 text-sm sm:text-md text-white">
               HHEC is staffed by geriatric trained professionals that offer full
               range of services to elderly ensuring their physical, mental and
               psychological well-being.
@@ -30,9 +32,9 @@ const Landing = () => {
       </div>
 
       <div>
-        <div className="my-24 px-16 lg:px-64 grid grid-cols-1 lg:grid-cols-2 items-center gap-40">
+        <div className="my-12 px-6 sm:my-24 sm:px-16 lg:px-64 grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-40">
           <div>
-            <h2 className="text-[#009C65] mb-8 text-2xl font-semibold">
+            <h2 className="text-[#009C65] mb-4 sm:mb-8 text-xl sm:text-2xl font-semibold">
               About Us
             </h2>
             <p className="text-gray-500">
@@ -47,7 +49,7 @@ const Landing = () => {
               enjoyment of living and socializing with likeminded residents,
               enjoying old age; adding years to life in good health.
             </p>
-            <h3 className="font-semibold mt-12 mb-6 text-lg">
+            <h3 className="font-semibold mt-8 sm:mt-12 mb-4 sm:mb-6 text-lg">
               Recreation Activities
             </h3>
             <ol className="text-gray-500 list-disc pl-4 space-y-2">
@@ -62,7 +64,7 @@ const Landing = () => {
               <a href="#">About Us</a>
             </button>
           </div>
-          <div className="overflow-hidden max-h-[600px]">
+          <div className="overflow-hidden max-h-[400px] lg:max-h-[600px]">
             <img
               src={aboutImg}
               alt="About Us"
@@ -71,8 +73,8 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      
-      <div className="py-28 px-12 flex flex-gap justify-center items-center gap-x-4 gap-y-16 flex-wrap bg-white">
+
+      <div className="py-12 sm:py-28 px-6 sm:px-12 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-4 gap-y-8 sm:gap-y-16 bg-white">
         <MyComponent
           title="Block A / CriticalNursing 24/7 care"
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
@@ -84,25 +86,25 @@ const Landing = () => {
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
           readMoreLink="/read-more"
           icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
-        />{" "}
+        />
         <MyComponent
           title="Block A / CriticalNursing 24/7 care"
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
           readMoreLink="/read-more"
           icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
-        />{" "}
+        />
         <MyComponent
           title="Block A / CriticalNursing 24/7 care"
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
           readMoreLink="/read-more"
           icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
-        />{" "}
+        />
         <MyComponent
           title="Block A / CriticalNursing 24/7 care"
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
           readMoreLink="/read-more"
           icon={<CiGlobe color="white" size={36} />} // Pass CiGlobe icon component
-        />{" "}
+        />
         <MyComponent
           title="Block A / CriticalNursing 24/7 care"
           description="Critical care, Alzheimer’s & related dementia care, post hospital recovery care, long term palliative care, disability care and physiotherapy...."
@@ -117,10 +119,9 @@ const Landing = () => {
         />
       </div>
 
-
-
       <footer className="bg-[#009C65] text-white py-12 mt-16">
-        <div className="container mx-auto px-6 lg:px-64 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto px-6 lg:px-64 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <img src={Logo} className="w-24" alt="hello" />
           <div>
             <h3 className="text-xl font-bold mb-4">
               Hope Hermitage Elderly Care
@@ -180,17 +181,16 @@ const Landing = () => {
           <p>&copy; 2024 Hope Hermitage Elderly Care. All rights reserved.</p>
         </div>
       </footer>
-
     </>
   );
 };
 
 function MyComponent({ title, description, readMoreLink, icon }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 bg-slate-50 px-4 py-10 w-96 relative">
+    <div className="flex flex-col items-center justify-center gap-4 bg-slate-50 px-4 py-10 w-full sm:w-96 relative">
       <div className="p-4 bg-green-500 -top-10 absolute">{icon}</div>
-      <h1 className="text-black font-bold text-2xl">{title}</h1>
-      <p className="text-gray-500 line-clamp-5">{description}</p>
+      <h1 className="text-black font-bold text-xl sm:text-2xl text-center">{title}</h1>
+      <p className="text-gray-500 line-clamp-5 text-center">{description}</p>
       <a href={readMoreLink} className="text-orange-600">
         Read More &#8594;
       </a>
